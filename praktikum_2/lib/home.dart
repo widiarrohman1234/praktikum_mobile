@@ -16,8 +16,49 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
-      if (_counter > 10) {
-        _counter = 1;
+      // if (_counter > 10) {
+      //   _counter = 1;
+      // }
+
+      // if (_counter % 2 == 0) {
+      //   _text = "Genap";
+      // } else {
+      //   _text = "Ganjil";
+      // }
+
+      // if (_counter % 2 == 0) {
+      //   _text = "Genap";
+      // } else {
+      //   _text = "Ganjil";
+      // }
+//Buat program untuk menampilkan bilangan genap kelipatan 3 mulai dari 1 sampai n!
+      // _text = "Ganjil: ";
+      // for (int i = 0; i <= _counter; i++) {
+      //   if (i == 0) {
+      //     _text += '';
+      //   } else if (i == 1) {
+      //     _text += ' ${i}, ';
+      //   } else {
+      //     if (i % 3 == 0) {
+      //       if (i % 2 == 0) {
+      //         _text += ' ${i}, ';
+      //       }
+      //     }
+      //   }
+      // }
+
+// Buatlah program untuk menampilkan bilangan prima mulai dari 1 sampai n!
+      _text = "Prima: ";
+      for (int i = 1; i < _counter; i++) {
+        int bil = 0;
+        for (var j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            bil = bil + 1;
+          }
+        }
+        if (bil == 2) {
+          _text += ' ${i}, ';
+        }
       }
     });
   }
