@@ -11,7 +11,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
   String _text = "Ganjil";
-  int _nilai = 3;
+  // int _nilai = 3;
 
   void _incrementCounter() {
     setState(() {
@@ -31,43 +31,40 @@ class _MyHomePageState extends State<MyHomePage> {
       // } else {
       //   _text = "Ganjil";
       // }
-//Buat program untuk menampilkan bilangan genap kelipatan 3 mulai dari 1 sampai n!
-      // _text = "Ganjil: ";
-      // for (int i = 0; i <= _counter; i++) {
-      //   if (i == 0) {
-      //     _text += '';
-      //   } else if (i == 1) {
-      //     _text += ' ${i}, ';
-      //   } else {
-      //     if (i % 3 == 0) {
-      //       if (i % 2 == 0) {
-      //         _text += ' ${i}, ';
-      //       }
-      //     }
-      //   }
-      // }
-
-// Buatlah program untuk menampilkan bilangan prima mulai dari 1 sampai n!
-      _text = "Prima: ";
-      for (int i = 1; i < _counter; i++) {
-        int bil = 0;
-        for (var j = 1; j <= i; j++) {
-          if (i % j == 0) {
-            bil = bil + 1;
+      //Buat program untuk menampilkan bilangan genap kelipatan 3 mulai dari 1 sampai n!
+      _text = "Ganjil: ";
+      for (int i = 0; i <= _counter; i++) {
+        if (i == 0) {
+          _text += '';
+        } else if (i == 1) {
+          _text += ' ${i}, ';
+        } else {
+          if (i % 3 == 0) {
+            if (i % 2 == 0) {
+              _text += ' ${i}, ';
+            }
           }
         }
-        if (bil == 2) {
-          _text += ' ${i}, ';
-        }
       }
+
+// Buatlah program untuk menampilkan bilangan prima mulai dari 1 sampai n!
+      // _text = "Prima: ";
+      // for (int i = 1; i < _counter; i++) {
+      //   int bil = 0;
+      //   for (var j = 1; j <= i; j++) {
+      //     if (i % j == 0) {
+      //       bil = bil + 1;
+      //     }
+      //   }
+      //   if (bil == 2) {
+      //     _text += ' ${i}, ';
+      //   }
+      // }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20));
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
